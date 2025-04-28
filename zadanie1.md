@@ -1,6 +1,6 @@
 # Zadanie 1 – Aplikacja pogodowa w kontenerze Docker
 
-[Demo](img/wynik.png)
+![Demo](img/wynik.png)
 
 ## Autor
 **Marek Zając**
