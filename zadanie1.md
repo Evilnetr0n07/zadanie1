@@ -7,7 +7,7 @@
 
 ## Linki
 - GitHub repozytorium: [https://github.com/Evilnetr0n07/zadanie1](https://github.com/Evilnetr0n07/zadanie1)
-- DockerHub obraz: [https://hub.docker.com/repository/docker/username275/weather-app/general](https://hub.docker.com/repository/docker/username275/weather-app/general)
+- DockerHub obraz: [https://hub.docker.com/r/username275/weather-app](https://hub.docker.com/r/username275/weather-app)
 
 ## 1. Opis aplikacji
 Aplikacja w Pythonie (Flask) umożliwia wybór miasta i kraju z listy oraz prezentuje pogodę. Po uruchomieniu loguje datę startu, autora i port.
