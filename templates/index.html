@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplikacja pogodowa</title>
+</head>
+<body>
+    <h1>Aplikacja pogodowa</h1>
+    <form method="post">
+        <!-- wybór kraju -->
+        <label>Kraj:
+            <select name="country" onchange="this.form.submit()">
+                {% for country in locations.keys() %}
+                <option value="{{ country }}" {% if selected_country == country %}selected{% endif %}>{{ country }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <!-- wybór miasta -->
+        <label>Miasto:
+            <select name="city">
+                {% for city in locations[selected_country] %}
+                <option value="{{ city }}" {% if selected_city == city %}selected{% endif %}>{{ city }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <!-- przycisk przesyłający wybrane miasto i kraj -->
+        <button type="submit">Pokaż pogodę</button>
+    </form>
+
+    <!-- wyświetlenie danych pogodowych -->
+    {% if weather %}
+    <div>
+        <h2>Pogoda w {{ selected_city }}</h2>
+        <p>Temperatura: {{ weather.temp }}°C</p>
+        <p>Opis: {{ weather.desc }}</p>
+        <p>Wilgotność: {{ weather.humidity }}%</p>
+        <p>Wiatr: {{ weather.wind }} m/s</p>
+    </div>
+    {% endif %}
+</body>
+</html>
+
