@@ -20,21 +20,24 @@ Budowanie obrazu z tagiem
 ```bash
 docker build -t username275/weather-app .
 ```
-[Budowanie](img/budowa.png)
+![Budowanie](img/budowa.png)
+
 Uruchomienie kontenera z zbudowanego wcześniej obrazu na porcie 5000 o nazwie pogoda
 ```bash
 docker run -d -p 5000:5000 --name pogoda username275/weather-app
 ```
-[Uruchomienie](img/uruchomienie.png)
+![Uruchomienie](img/uruchomienie.png)
+
 Sprawdzenie logów
 ```bash
 docker logs pogoda
 ```
-[Logi](img/logi.png)
+![Logi](img/logi.png)
+
 Sprawdzenie liczby warstw i rozmiaru obrazu
 ```bash
 docker history username275/weather-app
 docker image inspect username275/weather-app --format='{{.Size}}'
 ```
-[Rozmiar i warstwy](img/warstwy_rozmiar.png)
+![Rozmiar i warstwy](img/warstwy_rozmiar.png)
 
